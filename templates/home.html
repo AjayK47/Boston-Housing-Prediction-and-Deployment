@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Boston Housing Prediction</title>
+  <style>
+    body {
+      background-image: url('../static/images/background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 0; /* Remove default margin to ensure full-width background */
+      font-family: Arial, sans-serif; /* Choose a suitable font */
+    }
+
+    header {
+      background-color: #333; /* Dark background color for the header */
+      padding: 10px; /* Add some padding to the header */
+      text-align: center;
+      color: white; /* Text color for the header */
+      font-size: 24px; /* Adjust font size as needed */
+    }
+
+    form {
+      /* Center-align the form */
+      margin: 20px auto;
+      max-width: 400px; /* Set a maximum width for better readability */
+    }
+
+    label {
+      /* Add some styling for the labels if needed */
+      display: block; /* Display labels as block elements for better spacing */
+      margin-bottom: 5px;
+    }
+
+    input {
+      /* Add some styling for the input fields if needed */
+      width: 100%; /* Make input fields full-width */
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      /* Add some styling for the submit button if needed */
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%; /* Make submit button full-width */
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      /* Center-align the result */
+      text-align: center;
+      font-size: 20px; /* Adjust font size as needed */
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    Boston Housing Prediction
+  </header>
+
+  <form action="/pred" method="POST">
+    <br>
+    <br>
+    <label>Crime rate in zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Crime_rate"></input>
+    <br>
+    <br>
+    <label>Proportion of residential land in the zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Proportion_residential_land"></input>
+    <br>
+    <br>
+    <label>Proportion of non-retail business acres in zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Non_retail_business_acres"></input>
+    <br>
+    <br>
+    <label>Bound by Charles River (Yes-1/No-0):</label>
+    <br>
+    <br>
+    <input type="text" name="Bound_by_Charles_River"></input>
+    <br>
+    <br>
+    <label>Nitric oxides concentration (parts per 10 million):</label>
+    <br>
+    <br>
+    <input type="text" name="Nitric_oxides_concentration"></input>
+    <br>
+    <br>
+    <label>Average number of rooms per dwelling:</label>
+    <br>
+    <br>
+    <input type="text" name="Average_rooms_per_dwelling"></input>
+    <br>
+    <br>
+    <label>Proportion of owner-occupied units built prior to 1940:</label>
+    <br>
+    <br>
+    <input type="text" name="Proportion_occupied_units_prior_1940"></input>
+    <br>
+    <br>
+    <label>Weighted distances to five Boston employment centers:</label>
+    <br>
+    <br>
+    <input type="text" name="Weighted_distances_employment_centers"></input>
+    <br>
+    <br>
+    <label>Index of accessibility to radial highways:</label>
+    <br>
+    <br>
+    <input type="text" name="Index_accessibility_radial_highways"></input>
+    <br>
+    <br>
+    <label>Full-value property tax rate per $10,000 in the zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Property_tax_rate"></input>
+    <br>
+    <br>
+    <label>Pupil-teacher ratio in the zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Pupil_teacher_ratio"></input>
+    <br>
+    <br>
+    <label>Proportion of Black residents in the zone:</label>
+    <br>
+    <br>
+    <input type="text" name="Proportion_black_residents"></input>
+    <br>
+    <br>
+    <label>Percentage of lower status of the population:</label>
+    <br>
+    <br>
+    <input type="text" name="Percentage_lower_status"></input>
+  
+    <br>
+    <br>
+    <input type="submit"></input>
+  
+  </form>
+  
+  <div id="result">
+    {{result}}
+  </div>
+</body>
+
+</html>
