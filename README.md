@@ -1,4 +1,4 @@
-# Boston-Hosuing-Prediction-and-Deployment-
+# Boston-Housing-Prediction-and-Deployment
 This web application predicts the median housing cost in different areas in Boston based on various input features. It uses a machine learning model trained on the Boston Housing dataset.
 
 ## Features
